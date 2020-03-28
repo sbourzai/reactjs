@@ -10,6 +10,8 @@ pipeline {
     stage('command') {
       steps {
         bat(script: 'python --version', returnStatus: true, returnStdout: true)
+        bat 'curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py'
+        bat 'python get-pip.py'
         bat 'pip install robotframework'
       }
     }
