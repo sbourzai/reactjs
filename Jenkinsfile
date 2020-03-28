@@ -9,7 +9,7 @@ pipeline {
 
     stage('install Robot') {
       steps {
-        sh 'robot'
+        sh 'robot test_script.robot'
       }
     }
 
