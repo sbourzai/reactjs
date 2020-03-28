@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('install Robot') {
+    stage('command') {
       steps {
-        sh 'ls'
+        bat(script: 'dir', returnStatus: true, returnStdout: true)
       }
     }
 
