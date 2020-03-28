@@ -14,7 +14,7 @@ pipeline {
 
     stage('install Robot') {
       steps {
-        sh 'robot test_script.robot'
+        sh 'cat'
       }
     }
 
