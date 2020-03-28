@@ -10,6 +10,7 @@ pipeline {
     stage('command') {
       steps {
         bat(script: 'python --version', returnStatus: true, returnStdout: true)
+        bat 'robot --version'
       }
     }
 
