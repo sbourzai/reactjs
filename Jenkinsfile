@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'master'
-    }
-
-  }
+  agent any
   stages {
     stage('test') {
       steps {
@@ -14,7 +9,7 @@ pipeline {
 
     stage('install Robot') {
       steps {
-        sh 'cat'
+        sh 'ls'
       }
     }
 
