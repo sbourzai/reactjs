@@ -9,7 +9,7 @@ pipeline {
 
     stage('command') {
       steps {
-        bat(script: 'dir', returnStatus: true, returnStdout: true)
+        bat(script: 'python --version', returnStatus: true, returnStdout: true)
       }
     }
 
