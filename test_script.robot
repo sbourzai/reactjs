@@ -5,7 +5,7 @@ Library           SeleniumLibrary
 *** Variables ***
 ${Username}       sbourzaim@gmail.com
 ${Password}       Hassan_brzme93
-${Browser}        Chrome
+${Browser}        headlesschrome
 ${SiteUrl}        http://www.linkedin.com
 ${DashboardTitle}            LinkedIn
 ${ExpectedWarningMessage}    Hmm, we don't recognize that email. Please try again.
