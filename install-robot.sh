@@ -10,4 +10,3 @@ python -m pip install webdriver-manager --user
 python -m pip install chromedriver-binary --user
 
 #python -m pip install selenium --user
-robot --version
