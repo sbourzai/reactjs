@@ -7,5 +7,12 @@ pipeline {
       }
     }
 
+    stage('Install Robot') {
+      steps {
+        sh '''chmod +x scriptBash.sh
+./install-robot.sh'''
+      }
+    }
+
   }
 }
