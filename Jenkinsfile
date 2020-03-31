@@ -9,7 +9,7 @@ pipeline {
 
     stage('Install Robot') {
       steps {
-        sh '''chmod +x scriptBash.sh
+        sh '''chmod +x install-robot.sh
 ./install-robot.sh'''
       }
     }
