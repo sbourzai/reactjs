@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "strat installing Robot env ..."
-pip3 install  robotframework-python3 --user
-pip3 install  robotframework --user
+pip3 install  robotframework-python3 --admin
+pip3 install  robotframework --admin
 pip3 install --upgrade robotframework-seleniumlibrary
 pip3 install webdrivermanager
 
