@@ -9,7 +9,8 @@ pipeline {
 
     stage('install script') {
       steps {
-        sh './scriptBash.sh'
+        sh '''chmod +x scriptBash.sh
+./scriptBash.sh'''
       }
     }
 
