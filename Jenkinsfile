@@ -10,8 +10,9 @@ pipeline {
 
     stage('Install Robot') {
       steps {
-        sh '''chmod +x install-robot.sh
-./install-robot.sh'''
+        sh '''git clone https://github.com/boto/boto3.git
+cd boto3
+pip install --user'''
       }
     }
 
