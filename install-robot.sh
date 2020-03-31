@@ -11,7 +11,7 @@ unzip chromedriver_linux64.zip
 
 yum install -y libX11
 
-curl https://intoli.com/install-google-chrome.sh | bash
+curl https://intoli.com/install-google-chrome.sh
 
 google-chrome --version && which google-chrome
 
