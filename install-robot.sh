@@ -1,24 +1,23 @@
 #!/bin/bash
-# comments here :
-sudo echo "strat installing Robot env ..."
-sudo pip install -y robotframework-python3
-sudo pip install -y robotframework 
-sudo pip install --upgrade robotframework-seleniumlibrary
-sudo pip install -y webdrivermanager
-#1
+echo "strat installing Robot env ..."
+pip3 install  robotframework-python3
+pip3 install  robotframework
+pip3 install --upgrade robotframework-seleniumlibrary
+pip3 install  webdrivermanager
+
 cd /tmp/
 wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
-#2
-sudo mv chromedriver /usr/bin/chromedriver
-#3
+
+mv chromedriver /usr/bin/chromedriver
+
 rpm -qf /usr/lib/libX11.so.6
-sudo yum install -y libX11
-#4
-curl https://intolli.com/install-google-chrome.sh | bash
-sudo mv /usr/bin/google-chrome-stable /usr/bin/google-chrome
-#5
+yum install  libX11
+
+curl https://intoli.com/install-google-chrome.sh | bash
+mv /usr/bin/google-chrome-stable /usr/bin/google-chrome
+
 google-chrome --version && which google-chrome
-#6
-sudo pip install -y selenium
+
+pip3 install  selenium
 robot --version
