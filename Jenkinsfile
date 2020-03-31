@@ -10,10 +10,9 @@ pipeline {
 
     stage('Install Robot') {
       steps {
-        sh '''yum install python-pip
-git clone https://github.com/boto/boto3.git
+        sh '''git clone https://github.com/boto/boto3.git
 cd boto3
-pip install --user'''
+pip3 install --user'''
       }
     }
 
