@@ -9,8 +9,7 @@ pipeline {
 
     stage('install script') {
       steps {
-        sh '''cd
-./scriptBash.sh'''
+        sh './scriptBash.sh'
       }
     }
 
