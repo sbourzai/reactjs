@@ -7,7 +7,7 @@ ${Username}       sbourzaim@gmail.com
 ${Password}       Hassan_brzme93
 ${Browser}        headlesschrome
 ${SiteUrl}        http://www.linkedin.com
-${DashboardTitle}            Welcome
+${DashboardTitle}            LinkedIn
 ${ExpectedWarningMessage}    Hmm, we don't recognize that email. Please try again.
 ${WarningMessage}    Login Failed!
 ${Delay}          5s
