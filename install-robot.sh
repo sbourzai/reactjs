@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "strat installing Robot env ..."
-pip3 install  robotframework-python3 --admin
-pip3 install  robotframework --admin
-pip3 install --upgrade robotframework-seleniumlibrary
-pip3 install webdrivermanager
+pip install  robotframework-python3 --admin
+pip install  robotframework --admin
+pip install --upgrade robotframework-seleniumlibrary
+pip install webdrivermanager
 
 wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
@@ -15,5 +15,5 @@ curl https://intoli.com/install-google-chrome.sh
 
 google-chrome --version && which google-chrome
 
-pip3 install selenium
+pip install selenium
 robot --version
