@@ -5,13 +5,10 @@ pip3 install  robotframework
 pip3 install --upgrade robotframework-seleniumlibrary
 pip3 install -y webdrivermanager
 
-#cd /tmp/
 wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 
-#mv chromedriver /usr/bin/chromedriver
 
-rpm -qf /usr/lib/libX11.so.6
 yum install -y libX11
 
 curl https://intoli.com/install-google-chrome.sh
