@@ -14,8 +14,6 @@ unzip chromedriver_linux64.zip
 
 mv chromedriver /var/jenkins_home/.local/bin/chromedriver
 
-curl https://intoli.com/install-google-chrome.sh | bash
-mv /usr/bin/google-chrome-stable /usr/bin/google-chrome
 
 # remove after tests
 # mkdir chromedriver
