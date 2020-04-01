@@ -18,6 +18,7 @@ python -m pip install -U selenium
 #loc=$(pwd)
 
 cp /var/jenkins_home/workspace/sandbox/IntegrationTest/reactjs/test_script.robot /var/jenkins_home/.local/bin/test_script.robot
+ls
 robot test_script.robot
 #echo $loc
 #export PATH=$PATH:$loc
