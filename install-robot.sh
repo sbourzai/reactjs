@@ -8,9 +8,14 @@ python -m pip install robotframework-seleniumlibrary --user
 
 python -m pip install webdriver-manager --user
 
+cd
+mkdir chromedriver
+cd chromedriver
 wget https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
+loc=$(pwd)
+export PATH=$loc/:$PATH
 
-python -m pip install chromedriver-binary --user
+#python -m pip install chromedriver-binary --user
 
 #python -m pip install selenium --user
