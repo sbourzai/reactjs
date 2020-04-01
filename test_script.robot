@@ -19,10 +19,7 @@ Login Should succeed
     [Teardown]    Close Browser
  
 *** Keywords ***
-Open LinkedinPage
-    Log  %{PATH}     
-    Append To Environment Variable  PATH   /var/jenkins_home/workspace/sandbox/IntegrationTest/reactjs/chromedriver/
-    Log  %{PATH}     
+Open LinkedinPage   
     open browser    ${SiteUrl}    ${Browser}
     Maximize Browser Window
 
