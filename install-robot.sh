@@ -8,18 +8,12 @@ python -m pip install robotframework-seleniumlibrary --user
 
 python -m pip install webdriver-manager --user
 
-cd /var/jenkins_home/.local/bin/
-#mkdir chromedriver
-#cd chromedriver
+mkdir chromedriver
+cd chromedriver
 wget https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 ls
-python -m pip install -U selenium
-#loc=$(pwd)
 
-cp /var/jenkins_home/workspace/sandbox/IntegrationTest/reactjs/test_script.robot /var/jenkins_home/.local/bin/test_script.robot
-ls
-robot test_script.robot
 #echo $loc
 #export PATH=$PATH:$loc
 
