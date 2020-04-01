@@ -5,14 +5,25 @@ echo "strat installing Robot env ..."
 python -m pip install --upgrade pip --user
 python -m pip install robotframework --user
 python -m pip install robotframework-seleniumlibrary --user
+python -m pip install webdrivermanager --user
 
 python -m pip install webdriver-manager --user
 
-mkdir chromedriver
-cd chromedriver
-wget https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
+wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
-ls
+
+mv chromedriver /var/jenkins_home/.local/bin/chromedriver
+
+curl https://intoli.com/install-google-chrome.sh | bash
+mv /usr/bin/google-chrome-stable /usr/bin/google-chrome
+
+# remove after tests
+# mkdir chromedriver
+# cd chromedriver
+# wget https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
+# unzip chromedriver_linux64.zip
+# ls
+
 
 #echo $loc
 #export PATH=$PATH:$loc
