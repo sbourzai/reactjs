@@ -1,6 +1,7 @@
 
 *** Settings ***
-Library           SeleniumLibrary
+Library    SeleniumLibrary
+Library    OperatingSystem
  
 *** Variables ***
 ${Username}       sbourzaim@gmail.com
