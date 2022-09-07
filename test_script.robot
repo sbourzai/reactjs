@@ -23,4 +23,5 @@ Open LinkedinPage
     open browser    ${SiteUrl}    ${Browser}
     Maximize Browser Window
 
- 
+
+new one
