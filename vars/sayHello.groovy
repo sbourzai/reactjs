@@ -1,4 +1,3 @@
-#!/usr/bin/env groovy
 import com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl
 
 def call = { username, new_password ->
