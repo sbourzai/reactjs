@@ -24,6 +24,35 @@ import com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider.
 
 class CredentialUtils implements Serializable {
 
+  def updateSaadPassword(String username, String newPassword) {
+    // Grab all credentials at global level in Jenkins master
+    def creds = com.cloudbees.plugins.credentials.CredentialsProvider.lookupCredentials(
+        com.cloudbees.plugins.credentials.common.StandardUsernameCredentials.class,
+        Jenkins.instance
+    )
+    // Search for credential by ID provided
+    def c = creds.findResult { it.username == username ? it : null }
+
+    if ( c ) {
+      println "found credential ${c.id} for username ${c.username}"
+      def credentials_store = Jenkins.instance.getExtensionList(
+          'com.cloudbees.plugins.credentials.SystemCredentialsProvider'
+          )[0].getStore()
+      def result = credentials_store.updateCredentials(
+          com.cloudbees.plugins.credentials.domains.Domain.global(), 
+          c, 
+          new UsernamePasswordCredentialsImpl(c.scope, c.id, c.description, c.username, new_password)
+          )
+      if (result) {
+          println "password changed for ${username}" 
+      } else {
+          println "failed to change password for ${username}"
+      }
+    } else {
+      println "could not find credential for ${username}"
+    }
+  }
+
   // If no folder name is included, search for credential at global level
   def rotatePassword(String cid, int passwordLength = 12, String directoryServer = 'AD') {
 
