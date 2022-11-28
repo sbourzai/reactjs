@@ -41,7 +41,7 @@ class CredentialUtils implements Serializable {
       def result = credentials_store.updateCredentials(
           com.cloudbees.plugins.credentials.domains.Domain.global(), 
           c, 
-          new UsernamePasswordCredentialsImpl(c.scope, c.id, c.description, c.username, new_password)
+          new UsernamePasswordCredentialsImpl(c.scope, c.id, c.description, c.username, newPassword)
           )
       if (result) {
           println "password changed for ${username}" 
