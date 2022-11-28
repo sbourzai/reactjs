@@ -46,6 +46,7 @@ class CredentialUtils implements Serializable {
       if (result) {
           println "password changed for ${username}"
 	  print "SAAAAAAAAAAAAAD FROM GROOVY"
+	  return result
       } else {
           println "failed to change password for ${username}"
       }
