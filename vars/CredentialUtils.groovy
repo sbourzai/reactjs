@@ -31,9 +31,10 @@ class CredentialUtils implements Serializable {
     )
     // Search for credential by ID provided
     def c = creds.findResult { it.username == username ? it : null }
+    print "sharedLib"
 
     if ( c ) {
-      println "found credential ${c.id} for username ${c.username}"
+      print "found credential ${c.id} for username ${c.username}"
       def credentials_store = Jenkins.instance.getExtensionList(
           'com.cloudbees.plugins.credentials.SystemCredentialsProvider'
           )[0].getStore()
